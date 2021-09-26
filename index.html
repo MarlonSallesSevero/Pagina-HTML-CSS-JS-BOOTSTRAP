@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastro de Itens</title>
+        
+        <meta charset="UTF-8"/>  <!-- Definindo a codificação da pagina-->        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> <!--Dizendo para a pagina se redimensior dependendo do display do dispositivo-->		
+	<link rel="icon" href="icone.png"> <!--Definindo icone da pagina-->		
+        <link href="style.css" type="text/css" rel="stylesheet"/> <!--linkando o arquivo do css-->
+        <link href="bootstrap.min.css" rel="stylesheet"/> <!--Definindo a utilizaçao do bootstrap-->		
+        <script src="jquery-3.6.0.min.js"></script> <!--Utilizacao do framework bop-->		               
+        <script src="app.js"></script> <!--Linkando o arquivo Jquery--> 
+        <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+    </head>
+    <body style='background-color: greenyellow; color: black; font-family: monospace; font-size:15px'  >
+        <div class="container"><!--O container é um componente do Bootstrap que garante que o seu layout vai ficar alinhado corretamente na página.-->
+            
+            <div id="formulario-cadastro">
+                <div class="form-group"><!--The .form-group class is the easiest way to add some structure to forms.It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging.-->
+                   
+                    <div class="row"><!--Uma linha na teoria nao pode ter mais de 12 colunas-->
+       
+                        <div class="col-md-2"> <!--Classes de colunas indicam o número de colunas que você quer usar, dentro de uma possibilidade de 12, por row; Se você quiser três colunas de larguras idênticas, pode usar .col-4, por exemplo-->                            
+                            <label>Codigo:</label> <!--Indentificacao-->    
+                            <input type="text" id="objVisCod" class="form-control"/> <!--Form-control: Ela possui estilos para aparência, estado de foco e muito mais.-->                        
+                        </div>                         
+                         <div class="col-md-6">                           
+                            <label>Descricao:</label>
+                            <input type="text" id="objVisDescr" class="form-control"/>                      
+                        </div>
+                        
+                        <div class="col-md-2">                           
+                            <label>Marca:</label>
+                            <input type="text" id="objVisMarc" class="form-control"/>                      
+                        </div> 
+                        <div class="col-md-1">                           
+                            <label>Un:</label>
+                            <input type="text" id="objVisUn" class="form-control"/>                      
+                        </div>
+                        <div class="col-md-1 checkbox">
+                        <input class="form-check-input" type="checkbox" id="CheckDefault">
+                        <label>
+                         Ativo/Inativo
+                        </label>
+                      </div>
+                    </div> 
+                    
+                    
+                    <div class="row">
+       
+                        <div class="col-md-4">                            
+                            <label>Preco Custo:</label>   
+                            <input type="number" id="objVisPresC" class="form-control"/>                         
+                        </div>                         
+                         <div class="col-md-4">                           
+                            <label>Markup:</label>
+                            <input type="number" id="objVisPerLu" class="form-control"/>                      
+                        </div>
+                        
+                        <div class="col-md-4">                           
+                            <label>Preco de Venda:</label>
+                            <input type="number" id="objVisPresV" class="form-control"/>                      
+                        </div> 
+                    </div> 
+                    
+                    <div class="row">
+       
+                        <div class="col-md-4">                            
+                            <label>Estoque Minimo:</label>   
+                            <input type="number" id="objVisEsMi" class="form-control"/>                         
+                        </div>                         
+                         <div class="col-md-4">                           
+                            <label>Estoque Atual:</label>
+                            <input type="number" id="objVisEsAt" class="form-control"/>                      
+                        </div>
+                        
+                        <div class="col-md-4">                           
+                            <label>Estoque Maximo:</label>
+                            <input type="number" id="objVisEsMa" class="form-control"/>                      
+                        </div> 
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 pull-right">
+                            <button type="button" id="objVisBotFechar" class="btn btn-xs btn-danger">Fechar</button> <!--A classe .btn foi desenhada para ser usada com o elemento <button>. btn-secondary>Grau de Importancia -->
+                            <button type="button" id="objVisBotSalvar" class="btn btn-xs btn-success">Salvar</button>
+                        </div>                 
+                    </div>                    
+                </div>
+             </div>
+            
+            <!--Finalizacao da Primeira Div Criada, dentro do container-->
+             
+              <div id="formulario-listagem">
+                 <div class="form-group">
+                     <div class="row">
+                         <div class="col-md-12 pull-right">                             
+                            <button type="button" id="objVisBotAdd" class="btn btn-primary"><i class="fa fa-cart-plus"></i>Adicionar</button>                                                                         
+                        </div> 
+                     </div>  
+                     <div class="row">
+                         <div class="col-md-12">
+                            <table id="objVisTabProdutos" class="table"> <!--Just add the base class .table to any <table>, then extend with custom styles or our various included modifier classes.-->
+                                <thead>
+                                    <th>Nome</th>
+                                    <th>Codigo</th>
+                                    <th>Marca</th>
+                                    <th>Un Med</th>                                 
+                                    <th>Preco Venda</th>                                  
+                                    <th>Estoque Atual</th>                                   
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                         </div>
+                     </div>                         
+                </div>
+            </div>  
+             
+        </div> 
+    </body>
+</html>
