@@ -213,7 +213,7 @@ function validVlVenda(){
 function nvPercLucro(){
         var PrecoVenda = parseFloat($(this).val());
         var PrecoCusto = parseFloat($("#objVisPresC").val());
-        var nv_Percem = (PrecoVenda - PrecoCusto); 
+        var nv_Percem = (PrecoVenda - PrecoCusto); //CODIGO ERRADO 
          $("#objVisPerLu").val(nv_Percem);
       
 }
