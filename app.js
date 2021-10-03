@@ -85,7 +85,7 @@ function salvar(){
 
 function carregarProdutos(){
      $("#objVisTabProdutos tbody").html("");
-    Produtos.map(function (prod){ // Mapeando a funcao Prod? (referenciando qual funcao)
+    Produtos.map(function (prod){ 
         //iteracao entre os itens da lista 
         
         $("#objVisTabProdutos tbody").append( // Adicionando no objeto Virtual, tabela, as informacoes na linha e na coluna do corpo.
